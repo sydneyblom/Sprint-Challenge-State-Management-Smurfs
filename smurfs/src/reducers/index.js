@@ -37,7 +37,6 @@ export const rootReducer = (state = initialState, action) => {
             case SMURFS_ADD:
                 return {
                   ...state,
-                  isLoading: false,
                   smurfs: action.payload
                 }
 
