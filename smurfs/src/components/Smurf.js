@@ -11,7 +11,7 @@ const Smurf = (props) => {
             <Divider hidden />
             <p>Age: {props.smurf.age}</p>
             <p>Height: {props.smurf.height}</p>
-            <Divider hidden />
+
         </Card.Content>
         </Card>
     )

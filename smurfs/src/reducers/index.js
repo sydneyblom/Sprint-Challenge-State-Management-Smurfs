@@ -1,4 +1,4 @@
-import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE } from '../actions';
+import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE, SMURFS_ADD } from '../actions';
 
 const initialState = {
     smurfs: [] ,
@@ -34,6 +34,13 @@ export const rootReducer = (state = initialState, action) => {
                 isFetching: false,
                 error: action.payload.error
             }
+            case SMURFS_ADD:
+                return {
+                  ...state,
+                  isLoading: false,
+                  smurfs: action.payload
+                }
+
 
         default:
             return state

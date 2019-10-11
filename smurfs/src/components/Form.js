@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addSmurf } from '../actions/index';
-import { Input, Button } from 'semantic-ui-react'
+import { Input, Button } from 'semantic-ui-react';
 
 
 const Form = props => {
@@ -22,14 +22,14 @@ const Form = props => {
 
     return (
         <div>
-    
+            <form>
             <Input name="name" type="text" placeholder="Name" onChange={handleChanges}></Input>
             <Input name="age" type="text" placeholder="Age" onChange={handleChanges}></Input>
             <Input name="height" type="text" placeholder="Height" onChange={handleChanges}></Input>
-            <Button color='blue' type="submit" onClick={handleSubmit}>Add New Smurf</Button>
-  
+            <Button type="submit" onClick={handleSubmit}>Add New Smurf</Button>
+            </form>
         </div>
     )
 }
 
-export default connect(null, {addSmurf})(Form) 
+export default connect(null, {addSmurf})(Form);
